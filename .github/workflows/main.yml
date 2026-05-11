@@ -10,7 +10,15 @@ jobs:
     steps:
     - name: checkout code
       uses: actions/checkout@v2
+    - name: show python version
+      run: python --version  
     - name: install dependencies
+    - name: use python specific version
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: show version
+      run: python --version    
       run: pip install -r requirments.txt
     - name: run extract_data.py
       run: python extract_data.py 
