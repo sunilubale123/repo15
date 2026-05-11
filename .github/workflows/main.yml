@@ -11,6 +11,6 @@ jobs:
     - name: checkout code
       uses: actions/checkout@v2
     - name: install dependencies
-      run: pip install -r requirments.txt  
+      run: pip install pandas  
     - name: run extract_data.py
       run: python extract_data.py
