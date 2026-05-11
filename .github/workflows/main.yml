@@ -19,6 +19,7 @@ jobs:
         python-version: '3.10'
     - name: show version
       run: python --version    
+    - name: dependencies  
       run: pip install -r requirments.txt
     - name: run extract_data.py
       run: python extract_data.py 
